@@ -1,0 +1,104 @@
+{
+    "ScreenName": "Test form",
+    "DataComponents": [
+        {
+            "ShortCode": "FIRST_NAME",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "First name",
+            "RenderAsMobile": true
+        },
+        {
+            "ShortCode": "LAST_NAME",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "Last name",
+            "RenderAsMobile": true
+        },
+        {
+            "ShortCode": "DOB",
+            "DisplayTypeShortCode": "DATEPICKER",
+            "Label": "Date of birth",
+            "RenderAsMobile": true
+        },
+        {
+            "ShortCode": "PERSONAL_DETAILS_GROUP",
+            "DisplayTypeShortCode": "GROUP",
+            "Label": "Personal details",
+            "CSSClass": "group-card",
+            "Settings": [
+                { "Id": "DATA_COMPONENTS", "Text": "FIRST_NAME;LAST_NAME;DOB" }
+            ]
+        },
+        {
+            "ShortCode": "PHONE",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "Phone number",
+            "RenderAsMobile": true
+        },
+        {
+            "ShortCode": "MOBILE",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "Mobile number",
+            "RenderAsMobile": true
+        },
+        {
+            "ShortCode": "TEST",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "test 1",
+            "RenderAsMobile": true
+        },
+       {
+            "ShortCode": "TEST_2",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "test 2",
+            "RenderAsMobile": true
+        },
+      {
+            "ShortCode": "TEST_GROUP",
+            "DisplayTypeShortCode": "GROUP",
+            "Label": "Personal details",
+            "CSSClass": "group-card",
+            "Settings": [
+                { "Id": "DATA_COMPONENTS", "Text": "TEST;TEST_2" }
+            ]
+        },
+        {
+            "ShortCode": "TEST_3",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "test 3",
+            "RenderAsMobile": true
+        },
+       {
+            "ShortCode": "TEST_4",
+            "DisplayTypeShortCode": "TEXTBOX",
+            "Label": "test 4",
+            "RenderAsMobile": true
+        },
+      {
+            "ShortCode": "TEST_GROUP_2",
+            "DisplayTypeShortCode": "GROUP",
+            "Label": "Personal details",
+            "CSSClass": "group-card",
+            "Settings": [
+                { "Id": "DATA_COMPONENTS", "Text": "TEST_3;TEST_4" }
+            ]
+        },
+        {
+            "ShortCode": "CONTACT_DETAILS_GROUP",
+            "DisplayTypeShortCode": "GROUP",
+            "Label": "Personal details",
+            "CSSClass": "group-card",
+            "Settings": [
+                { "Id": "DATA_COMPONENTS", "Text": "PHONE;MOBILE;TEST_GROUP;TEST_GROUP_2" }
+            ]
+        },
+        {
+            "ShortCode": "COLUMN_GROUP",
+            "DisplayTypeShortCode": "GROUP",
+            "Label": "",
+            "CSSClass": "has-2-columns",
+            "Settings": [
+                { "Id": "DATA_COMPONENTS", "Text": "PERSONAL_DETAILS_GROUP;CONTACT_DETAILS_GROUP" }
+            ]
+        }
+    ]
+}
