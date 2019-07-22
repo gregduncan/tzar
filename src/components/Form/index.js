@@ -1,20 +1,18 @@
 import React, { Fragment } from 'react';
 
-import { Group, Textbox } from '../';
-
-export const Form = ({ payload }) => {
+export const Form = ({ payload, components, ...props }) => {
   let tree = [];
   const processed = [];
-  const components = payload.DataComponents;
-  const groups = components.filter(component => component.DisplayTypeShortCode === 'GROUP');
+  const dataComponents = payload.DataComponents;
+  const groups = dataComponents.filter(component => component.DisplayTypeShortCode === 'GROUP');
 
-  groups.map(group => {
+  groups.forEach(group => {
     const setting = group.Settings.find(setting => setting.Id === 'DATA_COMPONENTS');
     if (setting) {
       const shortCodes = setting.Text.split(';');
       if (shortCodes.length > 0) {
-        group.children = components.filter(component => shortCodes.includes(component.ShortCode));
-        group.children.map(child => processed.push(child.ShortCode));
+        group.children = dataComponents.filter(component => shortCodes.includes(component.ShortCode));
+        group.children.forEach(child => processed.push(child.ShortCode));
       }
     }
     processed.push(group.ShortCode);
@@ -25,18 +23,11 @@ export const Form = ({ payload }) => {
     const subGroups = [];
 
     group.children.forEach(child => {
-      switch (child.DisplayTypeShortCode) {
-        case 'TEXTBOX':
-          children.push(<Textbox key={child.ShortCode} payload={child} />);
-          break;
-        case 'DATEPICKER':
-          children.push(<Textbox key={child.ShortCode} payload={child} />);
-          break;
-        case 'GROUP':
-          subGroups.push(child);
-          break;
-        default:
-          break;
+      const Component = components.find(c => c.name.toLowerCase() === child.DisplayTypeShortCode.toLowerCase());
+      if (child.DisplayTypeShortCode === 'GROUP') {
+        subGroups.push(child);
+      } else {
+        children.push(<Component key={child.ShortCode} payload={child} {...props}></Component>);
       }
     });
 
@@ -48,8 +39,10 @@ export const Form = ({ payload }) => {
       });
     }
 
+    const Group = components.find(c => c.name === 'Group');
+
     tree.push(
-      <Group payload={group} key={group.ShortCode}>
+      <Group payload={group} key={group.ShortCode} {...props}>
         {children}
       </Group>
     );

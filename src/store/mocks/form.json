@@ -15,7 +15,7 @@
         },
         {
             "ShortCode": "DOB",
-            "DisplayTypeShortCode": "DATEPICKER",
+            "DisplayTypeShortCode": "TEXTBOX",
             "Label": "Date of birth",
             "RenderAsMobile": true
         },
@@ -39,56 +39,14 @@
             "DisplayTypeShortCode": "TEXTBOX",
             "Label": "Mobile number",
             "RenderAsMobile": true
-        },
-        {
-            "ShortCode": "TEST",
-            "DisplayTypeShortCode": "TEXTBOX",
-            "Label": "test 1",
-            "RenderAsMobile": true
-        },
-       {
-            "ShortCode": "TEST_2",
-            "DisplayTypeShortCode": "TEXTBOX",
-            "Label": "test 2",
-            "RenderAsMobile": true
-        },
-      {
-            "ShortCode": "TEST_GROUP",
-            "DisplayTypeShortCode": "GROUP",
-            "Label": "Personal details",
-            "CSSClass": "group-card",
-            "Settings": [
-                { "Id": "DATA_COMPONENTS", "Text": "TEST;TEST_2" }
-            ]
-        },
-        {
-            "ShortCode": "TEST_3",
-            "DisplayTypeShortCode": "TEXTBOX",
-            "Label": "test 3",
-            "RenderAsMobile": true
-        },
-       {
-            "ShortCode": "TEST_4",
-            "DisplayTypeShortCode": "TEXTBOX",
-            "Label": "test 4",
-            "RenderAsMobile": true
-        },
-      {
-            "ShortCode": "TEST_GROUP_2",
-            "DisplayTypeShortCode": "GROUP",
-            "Label": "Personal details",
-            "CSSClass": "group-card",
-            "Settings": [
-                { "Id": "DATA_COMPONENTS", "Text": "TEST_3;TEST_4" }
-            ]
-        },
+        },       
         {
             "ShortCode": "CONTACT_DETAILS_GROUP",
             "DisplayTypeShortCode": "GROUP",
             "Label": "Personal details",
             "CSSClass": "group-card",
             "Settings": [
-                { "Id": "DATA_COMPONENTS", "Text": "PHONE;MOBILE;TEST_GROUP;TEST_GROUP_2" }
+                { "Id": "DATA_COMPONENTS", "Text": "PHONE;MOBILE;" }
             ]
         },
         {
