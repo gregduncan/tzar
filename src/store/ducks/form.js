@@ -3,20 +3,19 @@ export const REGISTER = 'REGISTER';
 export const UPDATE_COMPONENT = 'UPDATE_COMPONENT';
 
 // ACTION CREATORS
-export const register = dataComponent => {
-  return (dispatch, getState) => {
-    const { components } = getState().form;
-    components.push(dataComponent);
-    dispatch({ type: REGISTER, payload: components });
+export const register = dataComponents => {
+  return dispatch => {
+    dispatch({ type: REGISTER, payload: dataComponents });
   };
 };
 
-export const update = (shortCode, value) => {
+export const onChange = (shortCode, value) => {
   return (dispatch, getState) => {
-    const components = getState().components;
+    const components = getState().form.components;
     const payload = components.map(component => {
       if (component.ShortCode === shortCode) {
         component.Value = value;
+        component.IsDirty = true;
       }
       return component;
     });
