@@ -5,7 +5,7 @@ export const UPDATE_COMPONENT = 'UPDATE_COMPONENT';
 // ACTION CREATORS
 export const register = dataComponents => {
   return dispatch => {
-    dispatch({ type: REGISTER, payload: dataComponents });
+    dispatch({ type: REGISTER, payload: JSON.parse(JSON.stringify(dataComponents)) });
   };
 };
 
