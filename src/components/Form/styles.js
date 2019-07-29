@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 1000px;
 `;
 
-export const H1 = styled.h1`
+export const Heading = styled.h1`
   color: #000;
   padding: 0;
   margin: 20px 0 50px 0;

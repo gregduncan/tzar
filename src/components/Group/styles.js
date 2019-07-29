@@ -10,7 +10,7 @@ export const Container = styled.div`
   border-radius: 5px;
 `;
 
-export const H2 = styled.h2`
+export const Heading = styled.h2`
   color: #000;
   padding: 0;
   margin: 0 0 30px 0;
