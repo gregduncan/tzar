@@ -1,8 +1,5 @@
-// ACTION TYPE CONSTANTS
-export const REGISTER = 'REGISTER';
-export const UPDATE_COMPONENT = 'UPDATE_COMPONENT';
+import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
-// ACTION CREATORS
 export const register = dataComponents => {
   return dispatch => {
     dispatch({ type: REGISTER, payload: JSON.parse(JSON.stringify(dataComponents)) });
@@ -22,30 +19,3 @@ export const onChange = (shortCode, value) => {
     dispatch({ type: UPDATE_COMPONENT, payload: payload });
   };
 };
-
-// REDUCER.
-const initialState = {
-  components: [],
-  test: 'TZAR'
-};
-
-export default function reducer(state = initialState, action) {
-  switch (action.type) {
-    case REGISTER: {
-      return {
-        ...state,
-        components: action.payload
-      };
-    }
-
-    case UPDATE_COMPONENT: {
-      return {
-        ...state,
-        components: action.payload
-      };
-    }
-
-    default:
-      return state;
-  }
-}

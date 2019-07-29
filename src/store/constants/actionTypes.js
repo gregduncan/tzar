@@ -1,0 +1,2 @@
+export const REGISTER = 'REGISTER';
+export const UPDATE_COMPONENT = 'UPDATE_COMPONENT';
