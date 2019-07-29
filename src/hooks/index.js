@@ -1,3 +1,3 @@
-import { useFormRenderer } from './form';
+import { useFormRenderer } from './forms/useFormRenderer';
 
 export { useFormRenderer };
