@@ -15,7 +15,7 @@
         },
         {
             "ShortCode": "DOB",
-            "DisplayTypeShortCode": "TEXTBOX",
+            "DisplayTypeShortCode": "CALENDAR",
             "Label": "Date of birth",
             "RenderAsMobile": true
         },

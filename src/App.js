@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 
 import payload from './store/mocks/form.json';
 import { Form, Group, Textbox, JsonView } from './components';
+import { Calendar } from './components/Calendar';
 import { register, onChange } from './store/ducks/form';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <Fragment>
-      <Form payload={payload} components={[Group, Textbox]} onChange={onChange} />
+      <Form payload={payload} components={[Group, Textbox, Calendar]} onChange={onChange} />
       <JsonView />
     </Fragment>
   );

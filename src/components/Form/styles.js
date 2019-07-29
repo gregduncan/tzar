@@ -10,7 +10,7 @@ export const H1 = styled.h1`
   padding: 0;
   margin: 20px 0 50px 0;
   font-size: 44px;
-  font-family: Oswald,sans-serif;
+  font-family: Oswald, sans-serif;
   color: #333;
   font-weight: normal;
 `;

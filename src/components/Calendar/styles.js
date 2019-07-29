@@ -1,8 +1,7 @@
+import '../../../node_modules/pikaday/css/pikaday.css';
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  margin-bottom: 15px;
-`;
+export const Container = styled.div``;
 
 export const Label = styled.span`
   color: #666;
