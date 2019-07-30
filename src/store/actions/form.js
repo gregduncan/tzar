@@ -10,9 +10,9 @@ export const onChange = (shortCode, value) => {
   return (dispatch, getState) => {
     const components = getState().form.components;
     const payload = components.map(component => {
-      if (component.ShortCode === shortCode && value) {
+      if (component.ShortCode === shortCode) {
         component.Value = value;
-        component.IsDirty = true;
+        component.IsDirty = ''!==value;
       }
       return component;
     });
