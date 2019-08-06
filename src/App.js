@@ -2,8 +2,7 @@ import React, { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 
 import payload from './store/data/form.json';
-import { Form, Group, Textbox, JsonView } from './components';
-import { Calendar } from './components/Calendar';
+import { Form, JsonView } from './components';
 import { register, onChange } from './store/actions/form';
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
 
   return (
     <Fragment>
-      <Form payload={payload} components={[Group, Textbox, Calendar]} onChange={onChange} />
+      <Form payload={payload} onChange={onChange} />
       <JsonView />
     </Fragment>
   );

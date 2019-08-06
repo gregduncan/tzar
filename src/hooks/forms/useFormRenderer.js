@@ -1,8 +1,5 @@
-import React from 'react';
-
-export const useFormRenderer = (payload, components, onChange) => {
+export const useFormRenderer = payload => {
   let tree = [];
-  const processed = [];
   const dataComponents = payload.DataComponents;
   const groups = dataComponents.filter(component => component.DisplayTypeShortCode === 'GROUP');
 
@@ -12,40 +9,26 @@ export const useFormRenderer = (payload, components, onChange) => {
       const shortCodes = setting.Text.split(';');
       if (shortCodes.length > 0) {
         group.children = dataComponents.filter(component => shortCodes.includes(component.ShortCode));
-        group.children.forEach(child => processed.push(child.ShortCode));
       }
     }
-    processed.push(group.ShortCode);
   });
 
   groups.forEach(group => {
-    const children = [];
     const subGroups = [];
 
     group.children.forEach(child => {
-      const Component = components.find(c => c.name.toLowerCase() === child.DisplayTypeShortCode.toLowerCase());
       if (child.DisplayTypeShortCode === 'GROUP') {
         subGroups.push(child);
-      } else {
-        children.push(<Component key={child.ShortCode} payload={child} onChange={onChange}></Component>);
       }
     });
 
     if (subGroups.length > 0) {
       subGroups.forEach(s => {
-        const subGroup = tree.find(g => g.key === s.ShortCode);
-        children.push(subGroup);
-        tree = tree.filter(t => t.key !== s.ShortCode);
+        tree = tree.filter(t => t.ShortCode !== s.ShortCode);
       });
     }
 
-    const Group = components.find(c => c.name === 'Group');
-
-    tree.push(
-      <Group payload={group} key={group.ShortCode}>
-        {children}
-      </Group>
-    );
+    tree.push(group);
   });
 
   return tree;

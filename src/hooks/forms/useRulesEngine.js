@@ -1,4 +1,1 @@
-
-export const useRulesEngine = (components, dataComponent) => {
-  
-}
+export const useRulesEngine = (components, dataComponent) => {};
