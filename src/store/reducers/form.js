@@ -1,8 +1,7 @@
 import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
 const initialState = {
-  components: [],
-  test: 'TZAR'
+  components: []
 };
 
 export default function reducer(state = initialState, action) {

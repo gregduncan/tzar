@@ -8,4 +8,4 @@ const LoadableComponent = Loadable({
   }
 });
 
-export const Calendar = ({ payload, onChange, register }) => <LoadableComponent payload={payload} onChange={onChange} />;
+export const Calendar = ({ payload, onChange }) => <LoadableComponent payload={payload} onChange={onChange} />;
