@@ -1,12 +1,14 @@
 import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
-export const register = dataComponents => {
-  return dispatch => {
-    dispatch({ type: REGISTER, payload: JSON.parse(JSON.stringify(dataComponents)) });
+export const componentDidMount = dataComponent => {
+  return (dispatch, getState) => {
+    const components = [...getState().form.components];
+    components.push(dataComponent);
+    dispatch({ type: REGISTER, payload: components });
   };
 };
 
-export const onChange = (shortCode, value) => {
+export const componentDidChange = (shortCode, value) => {
   return (dispatch, getState) => {
     const components = getState().form.components;
     const payload = components.map(component => {

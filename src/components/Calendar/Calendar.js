@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Pikaday from 'pikaday';
 
 import { Container, Label, Input } from './styles';
 
 export default ({ payload, onChange }) => {
   const data = useSelector(state => state.form.components.find(component => component.ShortCode === payload.ShortCode));
-  const dispatch = useDispatch();
   const ref = useRef(null);
 
   useEffect(() => {
@@ -19,7 +18,7 @@ export default ({ payload, onChange }) => {
   return (
     <Container className={data.CSSClass}>
       <Label>{payload.Label}</Label>
-      <Input type="text" ref={ref} value={data.Value} onSelect={e => dispatch(onChange(data.ShortCode, e.target.value))} />
+      <Input type="text" ref={ref} value={data.Value} onSelect={e => onChange(data.ShortCode, e.target.value)} />
     </Container>
   );
 };
