@@ -1,0 +1,64 @@
+{
+  "ScreenName": "Benchmark form",
+  "ScreenHelpDescription": "This is a benchmark of 4 components with the depth of 0",
+  "ShowBackButton": false,
+  "BackButtonLabel": "",
+  "ShowUndoButton": false,
+  "UndoButtonLabel": "",
+  "ShowSaveButton": false,
+  "SaveButtonLabel": "",
+  "SourceFile": "benchmarks/benchmark-r3-d0.json",
+  "ShowNextButton": false,
+  "NextButtonLabel": "",
+  "InLineNavigationButtons": false,
+  "hasCSSColumns": false,
+  "hasColumns": true,
+  "ActionButtons": [],
+  "DataComponents": [
+    {
+      "ShortCode": "RULES_TESTER",
+      "DisplayTypeShortCode": "RADIO",
+      "Label": "Select what to see",
+      "AllowedValues": [{ "Id": "A", "Text": "A" }, { "Id": "B", "Text": "B" }]
+    },
+    {
+      "ShortCode": "BLOCK-d0-A-1",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d0-A-1",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d0-B-2",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d0-B-2",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d0-C-3",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d0-C-3",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,604 @@
+{
+  "ScreenName": "Benchmark form",
+  "ScreenHelpDescription": "This is a benchmark of 40 components with the depth of 2",
+  "ShowBackButton": false,
+  "BackButtonLabel": "",
+  "ShowUndoButton": false,
+  "UndoButtonLabel": "",
+  "ShowSaveButton": false,
+  "SaveButtonLabel": "",
+  "SourceFile": "benchmarks/benchmark-r3-d2.json",
+  "ShowNextButton": false,
+  "NextButtonLabel": "",
+  "InLineNavigationButtons": false,
+  "hasCSSColumns": false,
+  "hasColumns": true,
+  "ActionButtons": [],
+  "DataComponents": [
+    {
+      "ShortCode": "RULES_TESTER",
+      "DisplayTypeShortCode": "RADIO",
+      "Label": "Select what to see",
+      "AllowedValues": [{ "Id": "A", "Text": "A" }, { "Id": "B", "Text": "B" }]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-1",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-1",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-2",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-2",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-3",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-3",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-A-1",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-1;BLOCK-d2-B-2;BLOCK-d2-C-3"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-5",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-5",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-6",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-6",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-7",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-7",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-B-5",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-5;BLOCK-d2-B-6;BLOCK-d2-C-7"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-9",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-9",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-10",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-10",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-11",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-11",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-C-9",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-9;BLOCK-d2-B-10;BLOCK-d2-C-11"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d0-A-1",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "GROUP-d1-A-1;GROUP-d1-B-5;GROUP-d1-C-9"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-14",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-14",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-15",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-15",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-16",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-16",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-A-14",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-14;BLOCK-d2-B-15;BLOCK-d2-C-16"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-18",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-18",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-19",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-19",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-20",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-20",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-B-18",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-18;BLOCK-d2-B-19;BLOCK-d2-C-20"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-22",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-22",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-23",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-23",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-24",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-24",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-C-22",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-22;BLOCK-d2-B-23;BLOCK-d2-C-24"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d0-B-14",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "GROUP-d1-A-14;GROUP-d1-B-18;GROUP-d1-C-22"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-27",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-27",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-28",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-28",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-29",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-29",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-A-27",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-27;BLOCK-d2-B-28;BLOCK-d2-C-29"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-31",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-31",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-32",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-32",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-33",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-33",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-B-31",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-31;BLOCK-d2-B-32;BLOCK-d2-C-33"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-A-35",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-A-35",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "A"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-B-36",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-B-36",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "==",
+          "Value": "B"
+        }
+      ]
+    },
+    {
+      "ShortCode": "BLOCK-d2-C-37",
+      "DisplayTypeShortCode": "TEXTBLOCK",
+      "Label": "TextBlock-GROUP-d2-C-37",
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d1-C-35",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "BLOCK-d2-A-35;BLOCK-d2-B-36;BLOCK-d2-C-37"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    },
+    {
+      "ShortCode": "GROUP-d0-C-27",
+      "DisplayTypeShortCode": "GROUP",
+      "CSSClass": "group-card",
+      "Settings": [
+        {
+          "Id": "DATA_COMPONENTS",
+          "Text": "GROUP-d1-A-27;GROUP-d1-B-31;GROUP-d1-C-35"
+        }
+      ],
+      "Rules": [
+        {
+          "Type": "ONLY_SHOW_WHEN",
+          "ShortCode": "RULES_TESTER",
+          "ComparisonType": "!=",
+          "Value": "C"
+        }
+      ]
+    }
+  ]
+}
