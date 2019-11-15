@@ -19,7 +19,7 @@
       "ShortCode": "RULES_TESTER",
       "DisplayTypeShortCode": "RADIO",
       "Label": "Select what to see",
-      "AllowedValues": [{ "Id": "A", "Text": "A" }, { "Id": "B", "Text": "B" }]
+      "AllowedValues": [{ "Id": "A", "Text": "A" }, { "Id": "B", "Text": "B" }, { "Id": "C", "Text": "C" }]
     },
     {
       "ShortCode": "BLOCK-d2-A-1",

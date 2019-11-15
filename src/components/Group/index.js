@@ -9,7 +9,7 @@ export const Group = ({ payload, onChange, components, register }) => {
 
   return (
     <Container className={data.CSSClass}>
-      <Heading>{payload.Label}</Heading>
+      <Heading>{payload.ShortCode}</Heading>
       {payload.children.map((component, i) => (
         <DCRenderer key={i} payload={component} onChange={onChange} components={components} register={register} />
       ))}

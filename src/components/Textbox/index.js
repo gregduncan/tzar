@@ -5,7 +5,7 @@ import { Input, Label, Container } from './styles';
 
 export const Textbox = ({ payload }) => {
   const data = useSelector(state => state.form.components.find(component => component.ShortCode === payload.ShortCode));
-
+  const updated = useSelector(state => state.form.updated);
   if(data.Visible){
     return (
       <Container>

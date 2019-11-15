@@ -1,7 +1,8 @@
 import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
 const initialState = {
-  components: []
+  components: [],
+  updated: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -16,7 +17,8 @@ export default function reducer(state = initialState, action) {
     case UPDATE_COMPONENT: {
       return {
         ...state,
-        components: action.payload
+        components: action.payload,
+        updated: !state.updated
       };
     }
 

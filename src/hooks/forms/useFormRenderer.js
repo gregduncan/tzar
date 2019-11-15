@@ -1,7 +1,10 @@
 export const useFormRenderer = payload => {
+  const t0 = performance.now();
+  
   let tree = [];
   const dataComponents = payload.DataComponents;
   const groups = dataComponents.filter(component => component.DisplayTypeShortCode === 'GROUP');
+  const radios = dataComponents.filter(component => component.DisplayTypeShortCode === 'RADIO');
 
   if(groups.length > 0){
     groups.forEach(group => {
@@ -31,6 +34,10 @@ export const useFormRenderer = payload => {
   
       tree.push(group);
     });
+    radios.forEach(item => tree.unshift(item));
+    const t1 = performance.now();
+    console.log(((t1 - t0) / 1000.0).toFixed(2) + " seconds.")
+
   } else {
     tree = dataComponents;
   }

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin: 0 auto;
-  padding: 20px;
+  width: 1000px;
+
 `;
 
 export const Heading = styled.h1`
