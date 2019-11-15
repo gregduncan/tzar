@@ -1,17 +1,20 @@
 import React from 'react';
-import { Textbox, Group, Calendar } from '../';
+import { Textbox, Group, Calendar, Radio } from '../';
 
 export const DCRenderer = ({ payload, onChange, register }) => {
   let component;
   switch (payload.DisplayTypeShortCode) {
     case 'GROUP':
-      component = <Group payload={payload} onChange={onChange} register={register} />;
+      component = <Group payload={payload} register={register} />;
       break;
-    case 'TEXTBOX':
-      component = <Textbox payload={payload} onChange={onChange} />;
-      break;
+    case 'TEXTBLOCK':
+        component = <Textbox payload={payload} />;
+        break;
+    case 'RADIO':
+        component = <Radio payload={payload} onChange={onChange} />;
+        break;
     case 'CALENDAR':
-      component = <Calendar payload={payload} onChange={onChange} />;
+      component = <Calendar payload={payload} />;
       break;
     default:
       throw new Error(`Unknown component ${payload.DisplayTypeShortCode}`);
