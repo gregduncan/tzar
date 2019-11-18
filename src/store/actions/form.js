@@ -9,16 +9,8 @@ export const componentDidMount = dataComponent => {
   };
 };
 
-export const componentDidChange = (value) => {
-  return (dispatch, getState) => {
-    const components = getState().form.components;
-    const payload = components.map(component => {
-      if(component.Rules) {
-        component.Visible = component.Rules[0].Value === value
-      } 
-      return component;
-    });
-    
-    dispatch({ type: UPDATE_COMPONENT, payload: payload });
+export const componentDidChange = value => {
+  return dispatch => {
+    dispatch({ type: UPDATE_COMPONENT, payload: value });
   };
 };

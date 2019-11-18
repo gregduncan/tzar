@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import { componentDidMount, componentDidChange } from '../../store/actions/form';
 import { useFormRenderer } from '../../hooks';
-import { Container, Heading } from './styles';
 import { DCRenderer } from '../';
 
 export const Form = ({ payload }) => {
@@ -20,11 +19,11 @@ export const Form = ({ payload }) => {
   };
 
   return (
-    <Container>
-      <Heading>{payload.ScreenName}</Heading>
+    <div>
+      <h1>{payload.ScreenName}</h1>
       {form.map((component, i) => (
         <DCRenderer key={i} payload={component} onChange={onChange} register={register} />
       ))}
-    </Container>
+    </div>
   );
 };
