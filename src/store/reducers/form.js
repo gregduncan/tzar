@@ -2,7 +2,8 @@ import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
 const initialState = {
   components: [],
-  ruleValue: undefined
+  ruleValue: undefined,
+  loadTime: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -10,7 +11,8 @@ export default function reducer(state = initialState, action) {
     case REGISTER: {
       return {
         ...state,
-        components: action.payload
+        components: action.payload.tree,
+        loadTime: action.payload.loadTime
       };
     }
 

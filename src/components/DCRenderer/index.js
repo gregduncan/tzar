@@ -1,11 +1,11 @@
 import React from 'react';
 import { Textbox, Group, Radio } from '../';
 
-export const DCRenderer = ({ payload, onChange, register }) => {
+export const DCRenderer = ({ payload, onChange }) => {
   let component;
   switch (payload.DisplayTypeShortCode) {
     case 'GROUP':
-      component = <Group payload={payload} register={register} />;
+      component = <Group payload={payload} />;
       break;
     case 'TEXTBLOCK':
       component = <Textbox payload={payload} />;
@@ -16,6 +16,5 @@ export const DCRenderer = ({ payload, onChange, register }) => {
     default:
       throw new Error(`Unknown component ${payload.DisplayTypeShortCode}`);
   }
-  register(payload);
   return component;
 };

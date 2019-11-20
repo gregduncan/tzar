@@ -1,10 +1,7 @@
 import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 
-export const componentDidMount = dataComponent => {
-  return (dispatch, getState) => {
-    const components = [...getState().form.components];
-    dataComponent.Visible = !dataComponent.Rules;
-    components.push(dataComponent);
+export const register = components => {
+  return dispatch => {
     dispatch({ type: REGISTER, payload: components });
   };
 };

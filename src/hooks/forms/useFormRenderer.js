@@ -35,11 +35,15 @@ export const useFormRenderer = payload => {
       tree.push(group);
     });
     radios.forEach(item => tree.unshift(item));
-    const t1 = performance.now();
-    console.log(((t1 - t0) / 1000.0).toFixed(2) + ' seconds.');
   } else {
     tree = dataComponents;
   }
 
-  return tree;
+  const t1 = performance.now();
+  const loadTime = ((t1 - t0) / 1000.0).toFixed(2) + ' seconds.';
+
+  return {
+    tree: tree,
+    loadTime: loadTime
+  };
 };

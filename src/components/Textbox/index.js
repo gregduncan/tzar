@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 export const Textbox = ({ payload }) => {
   const ruleValue = useSelector(state => state.form.ruleValue);
-  if ((payload.Rules[0].Value === ruleValue)) {
+  if (payload.Rules[0].Value === ruleValue) {
     return (
       <div>
         <span>{payload.Label}</span>
