@@ -3,7 +3,8 @@ import { REGISTER, UPDATE_COMPONENT } from '../constants/actionTypes';
 const initialState = {
   components: [],
   ruleValue: undefined,
-  loadTime: ''
+  loadTime: '',
+  count: 0
 };
 
 export default function reducer(state = initialState, action) {
@@ -12,7 +13,8 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         components: action.payload.tree,
-        loadTime: action.payload.loadTime
+        loadTime: action.payload.loadTime,
+        count: action.payload.count
       };
     }
 

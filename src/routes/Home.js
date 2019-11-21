@@ -8,7 +8,7 @@ import { register } from '../store/actions/form';
 export const Home = () => {
   const dispatch = useDispatch();
 
-  const loadTime = useSelector(state => state.form.loadTime);
+  const { loadTime, count } = useSelector(state => state.form);
 
   useEffect(() => {
     const form = formRenderer(payload);
@@ -21,7 +21,9 @@ export const Home = () => {
       <h2>Bench marking</h2>
       {loadTime && (
         <div>
-          <div>JSON load time:{loadTime}</div>
+          <div>
+            {count} data components loaded in: {loadTime}.
+          </div>
           <a href="#/benchmark">Start</a>
         </div>
       )}

@@ -45,6 +45,7 @@ export const useFormRenderer = payload => {
 
   return {
     tree: tree,
-    loadTime: loadTime
+    loadTime: loadTime,
+    count: payload.DataComponents.length
   };
 };
