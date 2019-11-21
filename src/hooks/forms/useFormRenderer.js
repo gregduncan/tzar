@@ -7,33 +7,34 @@ export const useFormRenderer = payload => {
   const radios = dataComponents.filter(component => component.DisplayTypeShortCode === 'RADIO');
 
   if (groups.length > 0) {
-    groups.forEach(group => {
-      const setting = group.Settings.find(setting => setting.Id === 'DATA_COMPONENTS');
+    for (let i = 0; i < groups.length; i++) {
+      const setting = groups[i].Settings.find(setting => setting.Id === 'DATA_COMPONENTS');
       if (setting) {
         const shortCodes = setting.Text.split(';');
         if (shortCodes.length > 0) {
-          group.children = dataComponents.filter(component => shortCodes.includes(component.ShortCode));
+          groups[i].children = dataComponents.filter(component => shortCodes.includes(component.ShortCode));
         }
       }
-    });
+    }
 
-    groups.forEach(group => {
+    for (let i = 0; i < groups.length; i++) {
       const subGroups = [];
 
-      group.children.forEach(child => {
+      for (let x = 0; x < groups[i].children.length; x++) {
+        let child = groups[i].children[x];
         if (child.DisplayTypeShortCode === 'GROUP') {
           subGroups.push(child);
         }
-      });
-
-      if (subGroups.length > 0) {
-        subGroups.forEach(s => {
-          tree = tree.filter(t => t.ShortCode !== s.ShortCode);
-        });
       }
 
-      tree.push(group);
-    });
+      if (subGroups.length > 0) {
+        for (let y = 0; y < subGroups.length; y++) {
+          tree = tree.filter(t => t.ShortCode !== subGroups[y].ShortCode);
+        }
+      }
+
+      tree.push(groups[i]);
+    }
     radios.forEach(item => tree.unshift(item));
   } else {
     tree = dataComponents;
