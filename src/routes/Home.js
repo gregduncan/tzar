@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import payload from '../store/data/benchmark-r3-d9.json';
+import payload from '../store/data/benchmark-r3-d5.json';
 import { useFormRenderer as formRenderer } from '../hooks';
 import { register } from '../store/actions/form';
 
